@@ -1,0 +1,27 @@
+{
+    "id": "1541C689",
+    "path": "~/pkg/geneticToolBox/R/analyse.R",
+    "project_path": "R/analyse.R",
+    "type": "r_source",
+    "hash": "4203678556",
+    "contents": "",
+    "dirty": false,
+    "created": 1644353005335.0,
+    "source_on_save": false,
+    "relative_order": 7,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "84,74",
+        "scrollLine": "80",
+        "docOutlineVisible": "1"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1645130178,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1645130178353,
+    "read_only": false,
+    "read_only_alternatives": []
+}
