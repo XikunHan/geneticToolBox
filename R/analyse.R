@@ -33,7 +33,6 @@ merge_check <- function(x, y, by = NULL, by.x = NULL, by.y = NULL) {
 }
 
 
-
 #' merge multiple data tables
 #'
 #' @param data_list A list of data tables.
@@ -104,3 +103,14 @@ meta_inverse_variance_df <- function(data = NULL, beta1, beta2, se1, se2) {
   close(con = pb)
   return(df_res)
 }
+
+
+#' remove duplicates and NA from a vector
+#'
+#' @param x A vector
+remove_duplicate_NA <- function(x) {
+  x <- x[!is.na(x)]
+  x <- x[!duplicated(x)]
+  return(x)
+}
+
