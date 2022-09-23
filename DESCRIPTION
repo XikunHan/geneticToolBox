@@ -12,4 +12,4 @@ Encoding: UTF-8
 Depends: R (>= 3.4.1)
 Imports: ggplot2 (>= 2.0.0), cowplot, data.table (>= 1.9.8), gplots, utils, stats, RColorBrewer
 Suggests: ggthemes, knitr, rmarkdown, testthat
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.1

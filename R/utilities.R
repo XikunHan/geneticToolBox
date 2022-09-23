@@ -29,3 +29,32 @@ format_digit <- function(x) {
 }
 
 
+#' create essential project folder 
+#' @param name project name
+#' @param path directory of the project
+#' @export
+#'
+create_project <- function(name = NULL, path = NULL)  {
+  
+  # Ex: create_project(name = "target", path = "/Users/xih628/Documents/project")
+  
+  if(is.null(path)) {
+    path <- getwd()
+    cat(paste0("\nWorking in the current folder: "), path)
+  }
+  
+  if(is.null(name)) {
+    name <-  basename(path)
+    cat(paste0("\nProject name is exist: "), name)
+  } else {
+    path <- file.path(path, name)
+  }
+  
+  cat(paste0("\nProject at: "), path)
+  
+  
+  for (folder in c("data", "script", "output", "result", "result/table", "result/figure")) {
+    dir.create(file.path(path, folder), showWarnings = FALSE)
+  }
+  
+}
