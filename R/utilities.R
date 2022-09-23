@@ -54,7 +54,7 @@ create_project <- function(name = NULL, path = NULL)  {
   
   
   for (folder in c("data", "script", "output", "result", "result/table", "result/figure")) {
-    dir.create(file.path(path, folder), showWarnings = FALSE)
+    dir.create(file.path(path, folder), recursive = TRUE)
   }
   
 }
