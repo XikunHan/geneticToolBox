@@ -97,24 +97,25 @@ read_last_line <- function(path = ".", pattern = NULL,  recursive = TRUE, full.n
 
 #' read in a batch of files
 #'
-#' @param path Full path to filse.
+#' read in a batch of files in the same format
+#' @param path Full path to file.
 #' @param pattern Match patter. See \code{\link{list.files}}.
+#' @param recursive Default false. See \code{\link{list.files}}.
 #' @export
 #'
 #'
-load_files <- function(path = ".", pattern = NULL) {
-  
-  v_files <- list.files(path = path, pattern = pattern)
+load_files <- function (path = ".", pattern = NULL, recursive = FALSE) 
+{
+  v_files <- list.files(path = path, pattern = pattern, recursive = recursive)
   print(paste0("file N = ", length(v_files)))
-  
   df_res <- NULL
-  
-  pb <- txtProgressBar(min = 0, max =length(v_files), style = 3, file = stderr())
-  
-  for(j in 1L:length(v_files)) {
+  pb <- txtProgressBar(min = 0, max = length(v_files), style = 3, 
+                       file = stderr())
+  for (j in 1L:length(v_files)) {
     setTxtProgressBar(pb = pb, value = j)
-    df_one <- data.table::fread(file.path(path, v_files[j]), fill=TRUE)
-    df_res <- rbind(df_res, cbind(df_one, file = v_files[j]))
+    df_one <- data.table::fread(file.path(path, v_files[j]), 
+                                fill = TRUE)
+    df_res <- rbind(df_res, cbind(df_one, file = v_files[j]), fill = TRUE)
   }
   return(df_res)
 }

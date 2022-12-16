@@ -4,13 +4,16 @@
 \alias{load_files}
 \title{read in a batch of files}
 \usage{
-load_files(path = ".", pattern = NULL)
+load_files(path = ".", pattern = NULL, recursive = FALSE)
 }
 \arguments{
 \item{path}{Full path to filse.}
+\item{path}{Full path to file.}
 
 \item{pattern}{Match patter. See \code{\link{list.files}}.}
+
+\item{recursive}{Default false. See \code{\link{list.files}}.}
 }
 \description{
-read in a batch of files
+read in a batch of files in the same format
 }
